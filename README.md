@@ -25,7 +25,7 @@ java -jar target\BootAdmin-0.0.1-SNAPSHOT.jar
 docker build -t bootadmin:latest . --build-arg JAR_FILE=./target/BootAdmin-0.0.1-SNAPSHOT.jar
 
 ## Docker run
-docker run --name bootadmin -d -p 9411:9411 --link serviceregistry:serviceregistry -v /tmp:/tmp -e EUREKA_ZONE=$EUREKA_ZONE servicelogs:latest
+docker run --name bootadmin -d -p 9080:9080 --link serviceregistry:serviceregistry -v /tmp:/tmp -e EUREKA_ZONE=$EUREKA_ZONE servicelogs:latest
 
 ## Check Admin UI
 http://localhost:9080/
