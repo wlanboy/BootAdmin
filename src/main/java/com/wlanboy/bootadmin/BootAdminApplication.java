@@ -6,7 +6,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.filter.CommonsRequestLoggingFilter;
 
-import de.codecentric.boot.admin.config.EnableAdminServer;
+import de.codecentric.boot.admin.server.config.EnableAdminServer;
 
 @SpringBootApplication
 @EnableDiscoveryClient
