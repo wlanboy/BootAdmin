@@ -4,18 +4,7 @@ spring:
   cloud:
     config:
       failFast: false
-      discovery:
-        serviceId: serviceconfig
-        enabled: true
-  zipkin:
-    base-url: http://servicelogging    
+      uri: http://cloudconfig:8888
 
 server:
   port: ${PORT:9080}
-
-eureka:
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: ${EUREKA_ZONE:http://127.0.0.1:8761/eureka/}   
