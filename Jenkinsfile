@@ -10,13 +10,6 @@ pipeline {
       steps {
         sh 'mvn clean package'
       }
-    }
-    stage('Publish') {
-      steps {
-        withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-          sh 'docker push wlanboy/bootadmin:latest'
-        }
-      }
-    }    
+    }  
   }
 }
