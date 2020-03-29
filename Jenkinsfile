@@ -22,6 +22,11 @@ pipeline {
       steps {
         sh 'mvn clean package'
       }
+    }    
+    stage('Container') {
+      steps {
+        sh 'docker build -t bootadmin:latest . --build-arg JAR_FILE=./target/BootAdmin-0.0.2-SNAPSHOT.jar'
+      }
     }
     stage('Publish') {
       when { expression { params.PUBLISHIMAGE == true } }
