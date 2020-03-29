@@ -25,7 +25,7 @@ pipeline {
     }    
     stage('Container') {
       steps {
-        sh 'docker build -t bootadmin:latest . --build-arg JAR_FILE=./target/BootAdmin-0.0.2-SNAPSHOT.jar'
+        sh 'docker build -t bootadmin:latest . --build-arg JAR_FILE=./target/bootadmin-0.0.2-SNAPSHOT.jar'
       }
     }
     stage('Publish') {
