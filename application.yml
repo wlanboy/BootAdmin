@@ -7,8 +7,6 @@ spring:
       discovery:
         serviceId: serviceconfig
         enabled: true
-  zipkin:
-    base-url: http://servicelogging    
 
 server:
   port: ${PORT:9080}
